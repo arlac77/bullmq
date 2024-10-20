@@ -20,7 +20,7 @@
     "lint": "tslint --project tsconfig.json -c tslint.json 'src/**/*.ts'",
     "test": "yarn lint && tsc && ts-mocha --paths 'src/**/test_*.ts' --exit",
     "test:watch": "yarn lint  && ts-mocha --paths 'src/**/test_*.ts' -w --watch-extensions ts",
-    "coverage": "nyc --reporter=text npm run test",
+    "coverage": "nyc --reporter=text node --run test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "precommit": "yarn lint",
     "semantic-release": "semantic-release",
